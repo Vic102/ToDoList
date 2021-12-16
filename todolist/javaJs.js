@@ -3,13 +3,17 @@ function stopExecution(e) {
   e.preventDefault();
   return;
 }
+function closeButton() {
+
+}
 
 function setFormMessage(message) {
   const messageBox = document.querySelector('.list');
   if (message == "") {
     return;
   }
-  messageBox.innerHTML += "<li>" + message + '</li>';
+  const botonCerrar = "<span> X </span>";
+  messageBox.innerHTML += "<li>" + message + closeButton()+ '</li>';
 }
 
 function keepData(event) {
