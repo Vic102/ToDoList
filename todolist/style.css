@@ -14,8 +14,6 @@ body {
   font-size: 11px;
 }
 
-
-
 #button-submit {
   background-color: white;
   border-color: #a7a7a7;
@@ -33,5 +31,5 @@ body {
 .list {
   margin-left: 15px;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: bold;
 }

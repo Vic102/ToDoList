@@ -9,9 +9,7 @@ function setFormMessage(message) {
   if (message == "") {
     return;
   }
-  messageBox.innerHTML += "&#9679; " + message + '<br/>';
-  messageBox.style.fontWeight = 'bold';
-  //messageBox.style.display = 'block';
+  messageBox.innerHTML += "<li>" + message + '</li>';
 }
 
 
