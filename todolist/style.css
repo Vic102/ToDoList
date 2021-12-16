@@ -1,0 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.common-style{
+  border-radius: 0;
+  border: 1px solid #d2d2d4;
+  border-collapse: collapse;
+  padding: 8px;
+  font-size: 11px;
+}
+
+
+
+#button-submit {
+  background-color: white;
+  border-color: #a7a7a7;
+}
+
+#text-input::placeholder {
+  color: #848484;
+  font-size: 11px;
+}
+
+.input-box {
+  margin-bottom: 12px;
+}
+
+.list {
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: 400;
+}

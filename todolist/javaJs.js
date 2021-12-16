@@ -1,10 +1,4 @@
 
-
-function isInputEmpty() {
-
-}
-let things = [];
-
 function stopExecution(e) {
   e.preventDefault();
   return;
@@ -12,17 +6,18 @@ function stopExecution(e) {
 
 function setFormMessage(message) {
   const messageBox = document.querySelector('.list');
-  messageBox.innerHTML = "+ " + message;
+  if (message == "") {
+    return;
+  }
+  messageBox.innerHTML += "&#9679; " + message + '<br/>';
   messageBox.style.fontWeight = 'bold';
   //messageBox.style.display = 'block';
 }
 
-let lengthThings = 0;
+
 function keepData(event) {
   const thingToDo = document.querySelector('#text-input').value;
-  things[lengthThings] = thingToDo;
-  setFormMessage(things[lengthThings]);
-  lengthThings++;
-  console.log(thingToDo);
+  setFormMessage(thingToDo);
+  document.querySelector('#text-input').value = "";
   return stopExecution(event);
 }
