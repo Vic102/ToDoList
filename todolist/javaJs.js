@@ -12,7 +12,6 @@ function setFormMessage(message) {
   messageBox.innerHTML += "<li>" + message + '</li>';
 }
 
-
 function keepData(event) {
   const thingToDo = document.querySelector('#text-input').value;
   setFormMessage(thingToDo);
