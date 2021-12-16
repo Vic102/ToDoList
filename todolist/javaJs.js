@@ -14,7 +14,6 @@ function setFormMessage(message) {
   //messageBox.style.display = 'block';
 }
 
-
 function keepData(event) {
   const thingToDo = document.querySelector('#text-input').value;
   setFormMessage(thingToDo);
