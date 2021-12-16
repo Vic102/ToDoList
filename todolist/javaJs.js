@@ -4,7 +4,7 @@ function stopExecution(e) {
   return;
 }
 function closeButton() {
-
+  document.querySelector('li').style.display = 'none';
 }
 
 function setFormMessage(message) {
@@ -12,8 +12,8 @@ function setFormMessage(message) {
   if (message == "") {
     return;
   }
-  const botonCerrar = "<span> X </span>";
-  messageBox.innerHTML += "<li>" + message + closeButton()+ '</li>';
+  const botonCerrar = "<span onclick = 'closeButton()'> &times; </span>";
+  messageBox.innerHTML += "<li>" + message + botonCerrar+ '</li>';
 }
 
 function keepData(event) {
