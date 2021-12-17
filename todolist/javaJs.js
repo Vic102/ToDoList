@@ -13,8 +13,8 @@ function setFormMessage(message) {
 }
 
 function keepData(event) {
-  const thingToDo = document.querySelector('#text-input').value;
-  setFormMessage(thingToDo);
-  document.querySelector('#text-input').value = "";
+  const thingToDo = document.querySelector('#text-input');
+  setFormMessage(thingToDo.value);
+  thingToDo.value = "";
   return stopExecution(event);
 }
