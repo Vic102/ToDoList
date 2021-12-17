@@ -15,7 +15,7 @@ body {
 }
 
 
-#button-submit {
+#button-submit, #myBtn {
   background-color: white;
   border-color: #a7a7a7;
 }
@@ -33,4 +33,10 @@ body {
   margin-left: 15px;
   font-size: 12px;
   font-weight: bold;
+}
+
+#myBtn {
+  padding: 2px;
+  margin: 2px;
+  background-color: lightgreen;
 }
