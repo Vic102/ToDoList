@@ -1,4 +1,16 @@
 let countColor = 0;
+let arr = new Array();
+let sizeArr = 0;
+
+function setDate(fecha) {
+  let year = fecha.getFullYear();
+  let month = fecha.getMonth() + 1;
+  let day = fecha.getDate();
+  let hour = fecha.getHours();
+  let minutes = fecha.getMinutes();
+  let fullDate = day + "/" + month + "/" + year + " " + hour + ":" + minutes + "h";
+  return fullDate;
+}
 
 function stopExecution(e) {
   e.preventDefault();
@@ -15,20 +27,15 @@ function setColor(countColor) {
 }
 
 function setFormMessage(message) {
+  let fecha = new Date();
   const messageBox = document.querySelector('.list');
   if (message == "") {
     return;
   }
-  messageBox.innerHTML += '<li>' + message + '</li>';
-  const listElement = document.getElementsByClassName('li');
-
-  if (countColor % 2 == 0) {
-    listElement.backgroundColor = '#f9f9f9';
-  } else {
-    listElement.backgroundColor = '#eeeeee';
-  }
-  countColor++;
-
+  let newElement = "<li>" + setDate(fecha) + " " + message + '</li>';
+  arr[sizeArr] = newElement;
+  messageBox.innerHTML += arr[sizeArr];
+  sizeArr++;
 }
 
 function keepData(event) {
