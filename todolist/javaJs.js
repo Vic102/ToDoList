@@ -9,14 +9,12 @@ function setFormMessage(message) {
   if (message == "") {
     return;
   }
-  messageBox.innerHTML += "&#9679; " + message + '<br/>';
-  messageBox.style.fontWeight = 'bold';
-  //messageBox.style.display = 'block';
+  messageBox.innerHTML += "<li>" + message + '</li>';
 }
 
 function keepData(event) {
-  const thingToDo = document.querySelector('#text-input').value;
-  setFormMessage(thingToDo);
-  document.querySelector('#text-input').value = "";
+  const thingToDo = document.querySelector('#text-input');
+  setFormMessage(thingToDo.value);
+  thingToDo.value = "";
   return stopExecution(event);
 }
